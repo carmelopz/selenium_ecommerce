@@ -13,4 +13,11 @@
     <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Tests\3_ShopMain_MenuTests\" />
+    <Folder Include="Tests\4_ShopMain_ProductsTests\" />
+    <Folder Include="Tests\5_ShopMain_FooterTests\" />
+    <Folder Include="Tests\6_ShopProduct_SingleProductTests\" />
+  </ItemGroup>
+
 </Project>
