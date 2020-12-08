@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+	<PackageReference Include="log4net" Version="2.0.12" />
 	<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
     <PackageReference Include="NUnit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
@@ -14,10 +15,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Resources\" />
     <Folder Include="Tests\3_ShopMain_MenuTests\" />
     <Folder Include="Tests\4_ShopMain_ProductsTests\" />
     <Folder Include="Tests\5_ShopMain_FooterTests\" />
     <Folder Include="Tests\6_ShopProduct_SingleProductTests\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

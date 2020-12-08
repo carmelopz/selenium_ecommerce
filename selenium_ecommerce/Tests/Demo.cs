@@ -7,6 +7,10 @@ using NUnit.Framework;
 using NUnit.Framework.Internal;
 using System.Threading;
 using OpenQA.Selenium.Support.UI;
+using log4net;
+using System.Reflection;
+using System.Xml;
+using System.IO;
 
 namespace selenium_ecommerce
 {
@@ -17,13 +21,17 @@ namespace selenium_ecommerce
         [SetUp]
         public void StartBrowser()
         {
-            Driver = SetUpSelenium();
-            Driver.Navigate().GoToUrl(SiteAddress);
+            SetupLogger();
+            Driver = SetupSelenium(windowSizeX: 800, windowSizeY: 600);
         }
 
         [Test]
         public void Test()
         {
+            Driver.Navigate().GoToUrl(SiteAddress);
+
+            log.Info("Witaj świecie z log4net!");
+
             //using (driver)
             //{
 
