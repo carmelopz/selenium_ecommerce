@@ -20,6 +20,7 @@ namespace selenium_ecommerce.Tests._1_ShopMain_TopBarTests
         [Test]
         public void Test()
         {
+            Driver = SetupSelenium(windowSizeX: 1200, windowSizeY: 1000);
             //using (driver)
             //{
 
