@@ -13,14 +13,11 @@ namespace selenium_ecommerce
 
         public virtual IWebDriver Driver { get; set; }
 
-
-        public virtual IWebDriver SetupSelenium(uint windowSizeX, uint windowSizeY)
+        public virtual void SetupSelenium(uint windowSizeX, uint windowSizeY)
         {
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.AddArgument($"--window-size={windowSizeX},{windowSizeY}");
             Driver = new ChromeDriver(chromeOptions);
-
-            return Driver;
         }
 
         public void SetupLogger()
