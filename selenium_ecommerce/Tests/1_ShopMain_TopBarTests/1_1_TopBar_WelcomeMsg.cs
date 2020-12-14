@@ -30,17 +30,17 @@ namespace selenium_ecommerce.Tests._1_ShopMain_TopBarTests
             {
                 try
                 {
-                    var elementFound = condition.FindElement(By.XPath(XPath["nm-top-bar-text"]));
+                    var elementFound = condition.FindElement(By.XPath(XPath["TopBarText"]));
                     return elementFound;
                 }
                 catch (NoSuchElementException elementNotFoundExc)
                 {
-                    log.Error("Can't find 'nm-top-bar-text' item.");
+                    log.Error("Can't find 'TopBarText' item.");
                     throw elementNotFoundExc;
                 }
             });
 
-            Assert.AreEqual(element.Text, expectedText, "'nm-top-bar-text' element is not as expected.");
+            Assert.AreEqual(element.Text, expectedText, "'TopBarText' element is not as expected.");
         }
 
         [TearDown]

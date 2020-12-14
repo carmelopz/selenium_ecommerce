@@ -11,7 +11,8 @@ namespace selenium_ecommerce
 
         public Dictionary<string, string> XPath = new Dictionary<string, string>()
         {
-            {"nm-top-bar-text", "//div[contains(@class, 'nm-top-bar-text')]"}
+            {"TopBarText", "//div[contains(@class, 'nm-top-bar-text')]"},
+            {"AboutUs",    "//li[@id='menu-item-1174']"}
         };
     }
 }
