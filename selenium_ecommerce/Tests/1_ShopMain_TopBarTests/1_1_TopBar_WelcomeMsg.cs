@@ -23,24 +23,21 @@ namespace selenium_ecommerce.Tests._1_ShopMain_TopBarTests
         {
             WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
 
-            //element = wait.Until(condition => condition.FindElement(By.XPath("//div[contains(@class, 'nm-top-bar-text')]")));
-            //element = Driver.FindElement(By.XPath("//div[contains(@class, 'nm-top-bar-text')]"));
-
             element = wait.Until(condition =>
             {
                 try
                 {
-                    var elementFound = condition.FindElement(By.XPath(XPath["nm-top-bar-text"]));
+                    var elementFound = condition.FindElement(By.XPath(XPathDct["TopBarText"]));
                     return elementFound;
                 }
                 catch (NoSuchElementException elementNotFoundExc)
                 {
-                    log.Error("Can't find 'nm-top-bar-text' item.");
+                    log.Error("Can't find 'TopBarText' item.");
                     throw elementNotFoundExc;
                 }
             });
 
-            Assert.AreEqual(element.Text, expectedText, "'nm-top-bar-text' element is not as expected.");
+            Assert.AreEqual(element.Text, expectedText, "'TopBarText' element is not as expected.");
         }
 
         [TearDown]
