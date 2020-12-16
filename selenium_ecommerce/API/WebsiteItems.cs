@@ -9,10 +9,11 @@ namespace selenium_ecommerce
     {
         public string SiteAddress = "https://www.soyalab.pl";
 
-        public Dictionary<string, string> XPath = new Dictionary<string, string>()
+        public Dictionary<string, string> XPathDct = new Dictionary<string, string>()
         {
             {"TopBarText", "//div[contains(@class, 'nm-top-bar-text')]"},
-            {"AboutUs",    "//li[@id='menu-item-1174']"}
+            {"AboutUs",    "//li[@id='menu-item-1174']"},
+            {"ContactUs",  "//*[contains(text(),'Telephone')]"}
         };
     }
 }
