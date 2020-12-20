@@ -23,6 +23,7 @@ namespace selenium_ecommerce.Tests._1_ShopMain_TopBarTests
         {
             WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
 
+            /* Find "TopBarText" item. */
             element = wait.Until(condition =>
             {
                 try

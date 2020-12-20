@@ -25,6 +25,7 @@ namespace selenium_ecommerce.Tests._1_ShopMain_TopBarTests
         {
             WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
 
+            /* Find "AboutUs" item and click on it. */
             element = wait.Until(condition =>
             {
                 try
@@ -43,6 +44,7 @@ namespace selenium_ecommerce.Tests._1_ShopMain_TopBarTests
 
             element.Click();
 
+            /* Find "ContactUs" item and check if phone number and email is as expected. */
             var element2 = wait.Until(condition =>
             {
                 try
