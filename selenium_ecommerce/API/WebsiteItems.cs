@@ -11,9 +11,13 @@ namespace selenium_ecommerce
 
         public Dictionary<string, string> XPathDct = new Dictionary<string, string>()
         {
+            /* TopBar tests related items. */
             {"TopBarText", "//div[contains(@class, 'nm-top-bar-text')]"},
             {"AboutUs",    "//li[@id='menu-item-1174']"},
-            {"ContactUs",  "//*[contains(text(),'Telephone')]"}
+            {"ContactUs",  "//*[contains(text(),'Telephone')]"},
+            {"AddToWishlistItem", "//a[@id='nm-wishlist-item-252-button']" },
+            {"Wishlist", "//li[@id='menu-item-1175']" },
+            {"PendantLampAtWishlist", "//*[contains(text(),'Pendant Lamp')]" }
         };
     }
 }
